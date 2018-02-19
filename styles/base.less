@@ -20,3 +20,25 @@ atom-pane {
     border-right: none;
   }
 }
+
+.scrollbars-visible-always {
+  /deep/ ::-webkit-scrollbar {
+    background-color: lighten(@background-color-selected, 8%);
+    width: 7px;
+    height: 7px;
+
+    &-track {}
+
+    &-thumb {
+      background-color: @background-color-selected;
+
+      &:window-inactive {
+        background-color: @base-background-color;
+      }
+    }
+
+    &-corner {
+      background-color: @base-background-color;
+    }
+  }
+}
